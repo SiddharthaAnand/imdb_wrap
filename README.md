@@ -81,6 +81,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Put in more data from imdb
 * Clean and structure the code better
 
-## Acknowledgments
+## References
 
-* None
+* [Creating a python package](https://python-packaging.readthedocs.io/en/latest/minimal.html)
