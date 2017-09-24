@@ -17,6 +17,7 @@ bs4
 ### How to use
 
 To get upcoming movie names:
+```
 >>> import imdb_wrap
 >>> soup = imdb_wrap.scraper('Sep')
 >>> movie_name = imdb_wrap.upcoming_movie_name(soup)
@@ -31,6 +32,7 @@ Pick any movie name from the list printed above
 
 >>> print movie_desc['Tulip Fever (2017)']
 An artist falls for a young married woman while he's commissioned to paint her portrait during the Tulip mania of 17th century Amsterdam.
+```
 
 ## Running the tests
 
