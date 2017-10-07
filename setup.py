@@ -8,4 +8,6 @@ setup(name="imdbwrap",
 	  author_email="siddharthalibra13@gmail.com",
 	  license="MIT",
 	  packages=['imdb_wrap'],
+	  test_suite='nose.collector',
+	  tests_require=['nose'],
 	  zip_safe=False)
