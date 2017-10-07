@@ -43,9 +43,9 @@ In order to run tests, unittest module is used. To make running the tests easier
 nose=1.3.7 version
 ```
 # This install the nose package in your system.
->>>pip install nose
+>>> pip install nose
 # Run this to check if the install is complete properly.
-nosetests
+>>> nosetests
 ``` 
 After nose gets installed, go to the setup.py module and add two parameters in the setup() call.
 ```
