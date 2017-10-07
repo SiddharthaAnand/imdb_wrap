@@ -39,7 +39,27 @@ An artist falls for a young married woman while he's commissioned to paint her p
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+In order to run tests, unittest module is used. To make running the tests easier, nose package is added.
+nose=1.3.7 version
+```
+# This install the nose package in your system.
+>>>pip install nose
+# Run this to check if the install is complete properly.
+nosetests
+``` 
+After nose gets installed, go to the setup.py module and add two parameters in the setup() call.
+```
+setup(
+	...
+	test_suite='nose.collector',
+	tests_require=['nose']
+)
+```
+
+Now, go to the top-level package directory and run the tests:
+```
+>>> python setup.py tests
+```
 
 ### Break down into end to end tests
 
