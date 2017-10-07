@@ -58,7 +58,7 @@ setup(
 
 Now, go to the top-level package directory and run the tests:
 ```
->>> python setup.py tests
+>>> python setup.py test
 ```
 
 ### Break down into end to end tests
