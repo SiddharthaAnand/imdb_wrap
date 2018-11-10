@@ -1,3 +1,5 @@
+# ignore venv directory
+venv/
 # ignore compiled python modules
 *.pyc
 # Setuptools distribution folder
