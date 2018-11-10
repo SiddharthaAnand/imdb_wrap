@@ -1,3 +1,5 @@
+# ignore idea files
+.idea/
 # ignore venv directory
 venv/
 # ignore compiled python modules
