@@ -5,11 +5,14 @@ from bs4 import BeautifulSoup
 
 month_num = {name:num for num, name in enumerate(calendar.month_abbr) if num}
 
+
 def validate(var, type):
 	pass
 
+
 def create_bs(response):
 	return BeautifulSoup(response.text.encode('utf-8'))
+
 
 def movie_information(soup):
 	movie_info_odd=soup.findAll('div', attrs={'class':'list_item odd'})
@@ -17,10 +20,19 @@ def movie_information(soup):
 	# Combine both in one list
 	return movie_info_odd, movie_info_even
 
+
 def upcoming_movie_name(soup):
-	movie_name_tag = soup.find_all('h4', attrs={'itemprop' : 'name'})
-	movie_names = [name.text.encode('utf-8').strip() for name in movie_name_tag if name.text != None]	
+	movie_names = []
+	movie_name_tag = soup.find_all('h4')
+	for _movie in movie_name_tag:
+		_movie_result = _movie.find_all('a')
+		try:
+			_movie_name = _movie_result[0]['title']
+			movie_names.append(_movie_name)
+		except KeyError as e:
+			continue
 	return movie_names
+
 
 def upcoming_movie_description(movie_info):
 	description = {}
@@ -43,12 +55,5 @@ def scraper(month='Jan'):
 	except Exception as e:
 		pass
 	soup = create_bs(response)
-	# Contains all movie related information in brief
-	# odd and even are nothing special, movie information are present inside both the attributes
-	#movie_names = upcoming_movie_name(soup)
-	#movie_info_odd, movie_info_even = movie_information(soup)
-	#movie_desc = upcoming_movie_description(movie_info_odd)
-	#return movie_desc
 	return soup
 
-#print scraper('Sep')
