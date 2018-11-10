@@ -7,7 +7,7 @@ month_num = {name:num for num, name in enumerate(calendar.month_abbr) if num}
 
 
 def create_bs(response):
-	return BeautifulSoup(response.text.encode('utf-8'))
+	return BeautifulSoup(response.text.encode('utf-8'),  "html.parser")
 
 
 def upcoming_movie_name(soup):
@@ -30,7 +30,7 @@ def scraper(month='Jan', year=2019):
 		url = "http://www.imdb.com/movies-coming-soon/{year}-{month}".format(year=year, month=month_num[month])
 	try:
 		response = requests.get(url)
-		print response
+		#print response
 	except Exception as e:
 		print e
 	soup = create_bs(response)
