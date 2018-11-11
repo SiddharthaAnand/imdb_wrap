@@ -30,7 +30,6 @@ def scraper(month='Jan', year=2019):
 		url = "http://www.imdb.com/movies-coming-soon/{year}-{month}".format(year=year, month=month_num[month])
 	try:
 		response = requests.get(url)
-		#print response
 	except Exception as e:
 		print e
 	soup = create_bs(response)
