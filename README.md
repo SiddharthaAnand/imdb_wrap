@@ -145,8 +145,8 @@ python packaging index. And it was easier than I thought!
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Next Milestone
-[ ] Put in more data from imdb
-[ ] Clean and structure the code better
+- [ ] Put in more data from imdb
+- [ ] Clean and structure the code better
 
 ## References
 
