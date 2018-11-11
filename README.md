@@ -1,20 +1,24 @@
-# imdb_wrap
+# [imdb_wrap](https://test.pypi.org/project/imdb-wrap/)
 
-A python package which gives you the upcoming movies in a particular month.
+[imdb_wrap](https://test.pypi.org/project/imdb-wrap/) is a python package which gives you the upcoming movies in a particular month.
 
 ## Getting Started
-
 You can simply install this package using the following commands:
+```
+$ pip install imdb_wrap
+```
+Dollar sign($) before the command simply means that it is the command 
+prompt of whatever command line interface you are using.
+
+3 append operators(>>>) before the command means that it is the 
+python shell which you get after typing python in your terminal 
+or command line.
 
 ### Prerequisites
+If you want to check out the code and contribute to this package, 
+you need to have some other set of packages as pre-requisites.
 
-You need the following packages
-
-```
-requests
-bs4
-```
-You can install the required packages by running:
+You can install the required packages from requirement.txt.
 ```
 $ pip install -r requirements.txt
 ```
@@ -35,9 +39,9 @@ In order to run tests, unittest module is used. To make running the tests easier
 nose=1.3.7 version
 ```
 # This install the nose package in your system.
->>> pip install nose
+$ pip install nose
 # Run this to check if the install is complete properly.
->>> nosetests
+$ nosetests
 ``` 
 After nose gets installed, go to the setup.py module and add two parameters in the setup() call.
 ```
@@ -69,30 +73,86 @@ Explain what these tests test and why
 Give an example
 ```
 
-## Deployment
+## Creating your library
 
-Add additional notes about how to deploy this on a live system
+This command is to be run if you do not have setuptools and 
+wheel installed.
+```
+python -m pip install --upgrade setuptools wheel
+```
+This command will create a source distribution(tar.gz) and a built 
+distribution(.whl). Newer pip versions install .whl version
+but will fall back to tar.gz if needed.
+```
+python setup.py sdist bdist_wheel
+```
+Run the above command from the same directory where setup.py 
+is located.
+Now, you can check that there will be two new files generated 
+inside dist/ directory if all went well and you see an output 
+similar to the following.
+```
+...
+adding 'imdb_wrap/__init__.py'
+adding 'imdb_wrap/imdb_engine.py'
+adding 'imdb_wrap/tests/__init__.py'
+adding 'imdb_wrap/tests/test_imdb_engine.py'
+adding 'imdb_wrap-0.1.dist-info/LICENSE'
+adding 'imdb_wrap-0.1.dist-info/METADATA'
+adding 'imdb_wrap-0.1.dist-info/WHEEL'
+adding 'imdb_wrap-0.1.dist-info/top_level.txt'
+adding 'imdb_wrap-0.1.dist-info/RECORD'
+```
+Congratulations! Your distribution files got created.
+Now it is the time to upload your package to the official
+python repository from where people all over the world can 
+download your awesome package!
 
+## Uploading to test pypi(test python packaging index)
+There are two repositories named testpypi and pypi. If you are 
+packaging and need a repository for testing purposes then the 
+community advises to use test pypi for uploading your packages. I 
+have currently used the same as my reference. The steps will be the 
+same and the commands will be slightly different.
+
+We need one last package to upload our awesome library to test python
+packaging index. 
+```
+python pip install --upgrade twine
+```
+Now, the last command to upload your distribution.
+```
+>> twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+```
+The repository url contains the test python packaging index url where
+I have uploaded this package.
+Press enter! It will ask for your username and password. Enter the same 
+username and password which you have created while creating an account 
+on test python packaging index.
+ 
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
+This is 0.1 version of the package which was created mainly for my 
+learning of creating and distributing the package through the 
+python packaging index. And it was easier than I thought!
 
 ## Authors
 
 * **Siddhartha Anand** - *Initial work* - [SiddharthaAnand](https://github.com/SiddharthaAnand)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Next Milestone
-* Put in more data from imdb
-* Clean and structure the code better
+[ ] Put in more data from imdb
+[ ] Clean and structure the code better
 
 ## References
 
 * [Creating a python package](https://python-packaging.readthedocs.io/en/latest/minimal.html)
+* [Test python packaging index - TestPyPI](https://test.pypi.org/)
+* [Python packaging index - PyPI](https://packaging.python.org/tutorials/packaging-projects/)
