@@ -1,7 +1,7 @@
 import setuptools
 
 setuptools.setup(name="imdb_wrap",
-      version="0.1",
+      version="0.2",
       description="Imdb: collection of movies",
       url="https://github.com/SiddharthaAnand/imdb_wrap",
       author="siddhartha",
