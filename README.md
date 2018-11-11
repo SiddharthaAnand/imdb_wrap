@@ -14,16 +14,15 @@ prompt of whatever command line interface you are using.
 python shell which you get after typing python in your terminal 
 or command line.
 
-### Prerequisites
 If you want to check out the code and contribute to this package, 
 you need to have some other set of packages as pre-requisites.
 
+### Prerequisites
 You can install the required packages from requirement.txt.
 ```
 $ pip install -r requirements.txt
 ```
 ### How to use
-
 To get upcoming movie names:
 ```
 >>> import imdb_wrap
@@ -34,7 +33,6 @@ To get upcoming movie names:
 ```
 
 ## Running the tests
-
 In order to run tests, unittest module is used. To make running the tests easier, nose package is added.
 nose=1.3.7 version
 ```
@@ -51,22 +49,21 @@ setup(
 	tests_require=['nose']
 )
 ```
-
 Now, go to the top-level package directory and run the tests:
+
+Of course, you can add your custom-made tests inside the tests/ 
+directory and then run:
 ```
 >>> python setup.py test
 ```
-
 ### Break down into end to end tests
-
 Explain what these tests test and why
 
 ```
-Give an example
+
 ```
 
 ### And coding style tests
-
 Explain what these tests test and why
 
 ```
@@ -74,9 +71,9 @@ Give an example
 ```
 
 ## Creating your library
-
 This command is to be run if you do not have setuptools and 
-wheel installed.
+wheel installed(No need of the following installation steps if 
+you have installed the packages from requirements.txt).
 ```
 python -m pip install --upgrade setuptools wheel
 ```
