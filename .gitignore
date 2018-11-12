@@ -1,3 +1,5 @@
+# ignore build/
+build/
 # ignore idea files
 .idea/
 # ignore venv directory
