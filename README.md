@@ -1,6 +1,6 @@
 # [imdb_wrap](https://test.pypi.org/project/imdb-wrap/)
 
-![Travis (.org)](https://img.shields.io/travis/SiddharthaAnand/imdb_wrap.svg?style=for-the-badge)
+[![Build Status](https://travis-ci.org/SiddharthaAnand/imdb_wrap.svg?branch=master)](https://travis-ci.org/SiddharthaAnand/imdb_wrap)
 
 [imdb_wrap](https://test.pypi.org/project/imdb-wrap/) is a python package which gives you the upcoming movies in a particular month.
 
