@@ -5,7 +5,7 @@
 [imdb_wrap](https://test.pypi.org/project/imdb-wrap/) is a python package which gives you the upcoming movies in a particular month.
 
 ## Getting Started
-You can simply install this package using the following commands:
+You can install this package using the following commands:
 ```
 $ pip install imdb_wrap
 ```
