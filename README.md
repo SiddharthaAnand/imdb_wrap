@@ -58,21 +58,9 @@ directory and then run:
 ```
 >>> python setup.py test
 ```
-### Break down into end to end tests
-Explain what these tests test and why
-
-```
-
-```
-
-### And coding style tests
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ## Creating your library
+This section for my reference only.
+
 This command is to be run if you do not have setuptools and 
 wheel installed(No need of the following installation steps if 
 you have installed the packages from requirements.txt).
